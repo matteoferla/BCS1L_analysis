@@ -262,3 +262,7 @@ extend_scores(scores)
 scores.to_csv('scores.csv')
 scores
 ```
+
+### Distance to key
+
+...

@@ -236,8 +236,12 @@ Doublecheck chains, using `model.has_interface(None, 'A_BCDEFGHIJKLMNOPQRST')`
 ## chec
 pi = pose.pdb_info()
 possible_chains = {pi.chain(res+1) for res in range(pose.total_residue())}
-possible_chains
+print(possible_chains)
+interface = 'A_'+''.join(sorted(possible_chains - {'A'}))
 ```
+
+    {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N'}
+
 Score...
 ```python
 import pandas as pd
@@ -247,7 +251,7 @@ model = MutantScorer(pose=pose, modelname=code)
 variants = ['👾👾👾', '👾👾👾', '👾👾👾']
 scoresx = []
 data = model.score_mutations(variants,
-                            chain='A',
+                            chains='A',
                             interfaces=(('chainA', 'A_BCDEFG'),),
                             preminimise=False,
                             distance=12,

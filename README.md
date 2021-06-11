@@ -1,12 +1,13 @@
-# BCS1L_analysis
-An analysis of BCS1L (no pathogenic variants stored here)
+# BCS1 analysis
+An analysis of BCS1 (no pathogenic variants stored here)
 
 ## Modelling
 
-BCS1L is a homologue of BCS1 and Paraplegin.
-There are no structures of BCS1L, but there are of the latter two.
+_BCS1L_ is the gene name and BCS1 is the protein name.
+It is a homologue of Paraplegin.
+There are no structures of human BCS1, but there are of mouse.
 
-BCS1L is 92% identical to BCS1. This has been solved by crystallography and cryoEM in 
+Murine BCS1 is 92% identical to human BCS1. This has been solved by crystallography and cryoEM in 
 
 > Tang, W.K., Borgnia, M.J., Hsu, A.L., Esser, L., Fox, T., de Val, N., Xia, D. (2020) Nat Struct Mol Biol 27: 202-209
 > [10.1038/s41594-020-0373-0](http://dx.doi.org/10.1038/s41594-020-0373-0)

@@ -1,0 +1,48 @@
+set_color turquoise, [64,224,208]
+set_color teal, [0, 128, 128]
+set_color verdigris, [67, 179, 174]
+set_color salmon, [255, 153, 153]
+set_color aquamarine, [127, 255, 212]
+set_color azure, [240, 255, 255]
+set_color robin, [0, 204, 204]
+set_color celeste, [178, 255, 255]
+set_color lcyan, [224, 255, 255]
+
+load 6uks.threaded.ATP.relaxed.pdb
+color atomic
+
+hide licorice, not polymer and not chain H+I
+hide spheres, not polymer and not chain H+I
+color grey80, polymer and element C
+
+select mts, resi 1-28
+select transmemb, resi 29-49
+select bcs1, resi 50-165
+select reca, resi 166-354
+select helbun, resi 355-418
+
+color lcyan, chain A and element C and mts
+color robin, chain A and element C and transmemb
+color aquamarine, chain A and element C and bcs1
+color verdigris, chain A and element C and reca
+color turquoise, chain A and element C and helbun
+create slice, not chain A+H+I
+color white, slice
+show surface, slice
+
+select pathogenic, resi 👾+👾+👾+👾+👾+👾 and chain A
+color salmon, pathogenic and element C
+show sticks, pathogenic
+
+set surface_quality, 1
+set ray_shadows,0
+set_view (\
+    -0.761336803,    0.160071284,   -0.628281713,\
+    -0.643609047,   -0.069589525,    0.762184322,\
+     0.078282639,    0.984649658,    0.156005114,\
+     0.000703424,   -0.000168396, -518.243103027,\
+   121.206916809,  125.373710632,   79.799209595,\
+   380.330963135,  656.174316406,  -20.000000000 )
+
+ray 2133, 1346
+save locations.png

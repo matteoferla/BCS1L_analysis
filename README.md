@@ -48,3 +48,4 @@ The symmetry feature could not be used due to excessive difference between chain
 The missing density 288-309 and 417-418 were not modelled due to time concerns.
 Likewise in hindsight, the model 6UKO is actually good and I should have used that.
 See [code notes](code.md) for more.
+
